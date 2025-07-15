@@ -17,16 +17,21 @@ Python script for the first step : inference_segms.py
 ### Environment Creation - First Option
 Environment YAML : segmentation__environment.yml
 
+```bash
 conda env create -f path/to/segmentation__environment.yml -n this_will_be_the_new_name_of_your_new_env_for_preprocess_and_segmentation
+```
 
 ### Environment Creation - Second Option
 Requierments text : nnunet_requirements.txt
 
+```bash
 conda create -n this_will_be_the_new_name_of_your_new_env_for_preprocess_and_segmentation
 conda activate this_will_be_the_new_name_of_your_new_env_for_preprocess_and_segmentation
 pip install -r pip install -r path/to/nnunet_requirements.txt
+```
 
 ### Things you need to change in the provided .py file.
+
 Line 14 : freesurfer_home = '/path/to/freesurfer' . In order to create the brain mask for the cropping we need the installation of the freesurfer.
 Line 135 : model_path = "/path/to/nnunet". Add here the location of the binary model.
 Line 247 : model_path = "path/to/multi". Add here the location of the multilabel model.
@@ -39,14 +44,19 @@ Python script for the second step : inference_norm_rads.py
 ### Environment Creation - First Option.
 Environment YAML : radiomics_environment.yml
 
+```bash
 conda env create -f path/to/radiomics_environment.yml -n this_will_be_the_new_name_of_your_new_env_for_radiomics_and_prediction
+```
 
 ### Environment Creation - Second Option.
 Requierments text :rads_requirements.txt
 
+```bash
 conda create -n this_will_be_the_new_name_of_your_new_env_for_radiomics_and_prediction
-conda activate this_will_be_the_new_name_of_your_new_env_for_radiomics_and_prediction
+conda activate
+ this_will_be_the_new_name_of_your_new_env_for_radiomics_and_prediction
 pip install -r pip install -r path/to/rads_requirements.txt
+```
 
 ### Things you need to change in the provided .py file.
 Lines 11 to 17 : provide the yaml file the extraction of the radiomics /path/to/all_shape.yaml
