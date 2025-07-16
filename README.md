@@ -41,7 +41,7 @@ Line 135 : model_path = "/path/to/binary". Add here the location of the binary m
 
 
 Line 247 : model_path = "/path/to/multi". Add here the location of the multilabel model.
---->
+---> https://drive.google.com/file/d/1r14hRPjsc_443_TZbsRSK3xm-ZbfFlK6/view?usp=share_link
 
 Line 355 : base_dir = "/path/to/dir". Update with the main directory. The main directory should be have subdirectories with the CTA NIfTI
 
