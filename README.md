@@ -36,9 +36,12 @@ pip install -r pip install -r path/to/nnunet_requirements.txt
 
 Line 14 : freesurfer_home = '/path/to/freesurfer' . In order to create the brain mask for the cropping we need the installation of the freesurfer.
 
-Line 135 : model_path = "/path/to/binary". Add here the location of the binary model.
+Line 135 : model_path = "/path/to/binary". Add here the location of the binary model. 
+---> https://drive.google.com/file/d/1p4TYVPz_QA0CvuX5HueYVUUYj-wgs5cj/view?usp=share_link
+
 
 Line 247 : model_path = "/path/to/multi". Add here the location of the multilabel model.
+--->
 
 Line 355 : base_dir = "/path/to/dir". Update with the main directory. The main directory should be have subdirectories with the CTA NIfTI
 
