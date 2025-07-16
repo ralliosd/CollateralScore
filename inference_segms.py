@@ -11,7 +11,7 @@ import glob
 
 
 # Set FreeSurfer environment variables
-freesurfer_home = '/home/dimitrios/freesurfer'
+freesurfer_home = '/path/to/freesurfer'
 os.environ['FREESURFER_HOME'] = freesurfer_home
 os.environ['PATH'] += os.pathsep + os.path.join(freesurfer_home, 'bin')
 
@@ -44,6 +44,7 @@ def crop_image(original_nifti_path, brain_mask_path, output_dir, voxel_count_thr
         print(f"Cropping image {original_nifti_path}")
         original_nifti_img = nib.load(original_nifti_path)
         brain_binary_img = nib.load(brain_mask_path)
+
 
         slice_count = brain_binary_img.shape[2]
         print(f"Total slices in z-axis: {slice_count}")
@@ -131,7 +132,7 @@ def run_inference_binary(input_cta):
         )
 
         # Load the trained model
-        model_path = "/data-raid5/dimitrios/nnUNetFrame_third/dataset/nnUNet_results/Dataset001_binarythird/nnUNetTrainer__nnUNetPlans__3d_fullres"
+        model_path = "/path/to/binary"
         
         predictor.initialize_from_trained_model_folder(
             model_path,
@@ -243,7 +244,7 @@ def run_inference_mutli(input_cta):
         )
 
         # Load the trained model
-        model_path = "/data-raid5/dimitrios/nnUNetFrame_twocm/dataset/nnUNet_results/Dataset001_twocm/nnUNetTrainerNoMirroring__nnUNetPlans__3d_fullres"
+        model_path =  "/path/to/multi"
         
         predictor.initialize_from_trained_model_folder(
             model_path,
@@ -351,8 +352,8 @@ def process_cta(cta_path, output_dir, template_path):
     return registered_cta
 
 def main():
-    base_dir = "/home/dimitrios/HERE_ORHUN/play_cta"  # Update with the main directory
-    template_path = "/home/dimitrios/template.nii.gz"  # Template file path
+    base_dir = "/path/to/dir"  # Update with the main directory
+    template_path = "/path/to/template"  # Template file path
     cost_function_registration = "mutualinfo"  # Set the registration method
 
     # Loop through all folders in base_dir

@@ -8,13 +8,13 @@ from sklearn.metrics import roc_auc_score
 from sklearn.utils import resample
 # YAML file mappings for segmentations
 yaml_mappings = {
-    "right_binary_segmentation.nii.gz": "/home/dimitrios/HERE_ORHUN/all_shape.yaml",
-    "left_binary_segmentation.nii.gz": "/home/dimitrios/HERE_ORHUN/all_shape.yaml",
-    "rest_segm_reg.nii.gz": "/home/dimitrios/HERE_ORHUN/all_shape.yaml",
-    "MCA_segm_l.nii.gz": "/home/dimitrios/HERE_ORHUN/all_shape.yaml",
-    "MCA_segm_r.nii.gz": "/home/dimitrios/HERE_ORHUN/all_shape.yaml",
-    "ICA_segm_l.nii.gz": "/home/dimitrios/HERE_ORHUN/all_shape.yaml",
-    "ICA_segm_r.nii.gz": "/home/dimitrios/HERE_ORHUN/all_shape.yaml",
+    "right_binary_segmentation.nii.gz": "/path/to/all_shape.yaml",
+    "left_binary_segmentation.nii.gz": "/path/to/all_shape.yaml",
+    "rest_segm_reg.nii.gz": "/path/to/all_shape.yaml",
+    "MCA_segm_l.nii.gz": "/path/to/all_shape.yaml",
+    "MCA_segm_r.nii.gz": "/path/to/all_shape.yaml",
+    "ICA_segm_l.nii.gz": "/path/to/all_shape.yaml",
+    "ICA_segm_r.nii.gz": "/path/to/all_shape.yaml",
 }
 
 # List of feature names to keep (currently empty — customize as needed)
@@ -256,10 +256,10 @@ def predict_patient_outcome(patient_csv_path):
 
     # Step 2: Load models
     model_paths = [
-        '/home/dimitrios/Exp1_only_shape/shape_both1.joblib',
-        '/home/dimitrios/Exp1_only_shape/shape_both2.joblib',
-        '/home/dimitrios/Exp1_only_shape/shape_both3.joblib',
-        '/home/dimitrios/Exp1_only_shape/shape_both4.joblib'
+        "/path/to/models1",
+        "/path/to/models2",
+        "/path/to/models3",
+        "/path/to/models4"
     ]
 
     print("🤖 Running model ensemble predictions...")
@@ -293,6 +293,6 @@ def process_all_patients(base_dir):
 
 
 # Run the script
-base_dir = "/home/dimitrios/HERE_ORHUN"
+base_dir = "/path/to/dir"
 process_all_patients(base_dir)
 
